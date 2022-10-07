@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tela de Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input
+        type="email"
+        name="email"
+        [(ngModel)]="userCadastro.email"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input
+        type="password"
+        name="password"
+        [(ngModel)]="userCadastro.password"
+      ></ion-input>
+    </ion-item>
+    <ion-item style="padding-bottom: 20px">
+      <ion-label position="floating">Confirmar a Senha</ion-label>
+      <ion-input name="password-confirmation" type="password"></ion-input>
+    </ion-item>
+  </form>
+  <!--  <ion-text>
+      <p></p>
+    </ion-text>
+  -->
+  <ion-button (click)="realizarCadastro()" expand="block" color="primary">
+    Realizar cadastro
+  </ion-button>
+  <ion-button color="primary" expand="block" routerLink="/tabs">
+    <ion-icon slot="start" name="logo-facebook"></ion-icon>
+    Cadastrar com Facebook
+  </ion-button>
+  <ion-button color="danger" expand="block" routerLink="/tabs">
+    <ion-icon slot="start" name="logo-googleplus"></ion-icon>
+    Cadastrar com Google
+  </ion-button>
+</ion-content>
